@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_customer_logos",
+  "info": {
+    "displayName": "customer-logo"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "hero"
+  },
+  "options": {},
+  "attributes": {
+    "headline_line_1": {
+      "type": "string"
+    },
+    "headline_line_2": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta_text": {
+      "type": "string"
+    },
+    "cta_link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

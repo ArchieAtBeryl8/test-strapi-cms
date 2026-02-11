@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_services_sections",
+  "info": {
+    "displayName": "services-section"
+  },
+  "options": {},
+  "attributes": {
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_normal": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "shared.service-item",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

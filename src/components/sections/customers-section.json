@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_customers_sections",
+  "info": {
+    "displayName": "customers-section"
+  },
+  "options": {},
+  "attributes": {
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_normal": {
+      "type": "string"
+    },
+    "logos": {
+      "type": "component",
+      "component": "shared.customer-logo",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
