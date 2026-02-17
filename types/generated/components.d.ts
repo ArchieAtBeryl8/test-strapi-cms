@@ -29,6 +29,18 @@ export interface SectionsHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsProvidedServices extends Struct.ComponentSchema {
+  collectionName: 'components_sections_provided_services';
+  info: {
+    displayName: 'provided-services';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsServicesSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_services_sections';
   info: {
@@ -139,6 +151,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'sections.customers-section': SectionsCustomersSection;
       'sections.hero': SectionsHero;
+      'sections.provided-services': SectionsProvidedServices;
       'sections.services-section': SectionsServicesSection;
       'shared.customer-logo': SharedCustomerLogo;
       'shared.media': SharedMedia;
