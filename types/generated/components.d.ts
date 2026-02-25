@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SectionsCompanySectionOne extends Struct.ComponentSchema {
+  collectionName: 'components_sections_company_section_ones';
+  info: {
+    displayName: 'company_section_one';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsCustomersSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_customers_sections';
   info: {
@@ -54,6 +69,32 @@ export interface SectionsServicesSection extends Struct.ComponentSchema {
     services: Schema.Attribute.Component<'shared.service-item', true>;
     title_highlight: Schema.Attribute.String;
     title_normal: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsStrengthComponent extends Struct.ComponentSchema {
+  collectionName: 'components_sections_strength_components';
+  info: {
+    displayName: 'strength_component';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsStrengths extends Struct.ComponentSchema {
+  collectionName: 'components_sections_strengths';
+  info: {
+    displayName: 'strengths';
+  };
+  attributes: {
+    strength_component: Schema.Attribute.Component<
+      'sections.strength-component',
+      true
+    >;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -149,10 +190,13 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'sections.company-section-one': SectionsCompanySectionOne;
       'sections.customers-section': SectionsCustomersSection;
       'sections.hero': SectionsHero;
       'sections.provided-services': SectionsProvidedServices;
       'sections.services-section': SectionsServicesSection;
+      'sections.strength-component': SectionsStrengthComponent;
+      'sections.strengths': SectionsStrengths;
       'shared.customer-logo': SharedCustomerLogo;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_strengths",
+  "info": {
+    "displayName": "strengths"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "strength_component": {
+      "type": "component",
+      "component": "sections.strength-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
