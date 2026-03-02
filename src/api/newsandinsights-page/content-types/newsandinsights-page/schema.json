@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "newsandinsights_pages",
+  "info": {
+    "singularName": "newsandinsights-page",
+    "pluralName": "newsandinsights-pages",
+    "displayName": "newsandinsights-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "newsandinsights": {
+      "type": "component",
+      "component": "sections.newsandinsights-section",
+      "repeatable": false
+    }
+  }
+}
