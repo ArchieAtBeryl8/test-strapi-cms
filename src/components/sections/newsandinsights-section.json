@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_newsandinsights_sections",
+  "info": {
+    "displayName": "newsandinsights-section",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "title_highlight": {
+      "type": "string"
+    },
+    "title_normal": {
+      "type": "string"
+    },
+    "newandinsight_component": {
+      "type": "component",
+      "component": "sections.newsandinsights-component",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

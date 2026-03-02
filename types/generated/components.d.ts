@@ -44,6 +44,42 @@ export interface SectionsHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsNewsandinsightsComponent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sections_newsandinsights_components';
+  info: {
+    displayName: 'newsandinsights_component';
+    icon: 'command';
+  };
+  attributes: {
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Blocks;
+    icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    newandinsights: Schema.Attribute.Component<'shared.newsandinsight', true>;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsNewsandinsightsSection extends Struct.ComponentSchema {
+  collectionName: 'components_sections_newsandinsights_sections';
+  info: {
+    displayName: 'newsandinsights-section';
+    icon: 'command';
+  };
+  attributes: {
+    newandinsight_component: Schema.Attribute.Component<
+      'sections.newsandinsights-component',
+      true
+    >;
+    title_highlight: Schema.Attribute.String;
+    title_normal: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsProvidedServices extends Struct.ComponentSchema {
   collectionName: 'components_sections_provided_services';
   info: {
@@ -124,6 +160,23 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNewsandinsight extends Struct.ComponentSchema {
+  collectionName: 'components_shared_newsandinsights';
+  info: {
+    displayName: 'newsandinsight';
+    icon: 'command';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -193,12 +246,15 @@ declare module '@strapi/strapi' {
       'sections.company-section-one': SectionsCompanySectionOne;
       'sections.customers-section': SectionsCustomersSection;
       'sections.hero': SectionsHero;
+      'sections.newsandinsights-component': SectionsNewsandinsightsComponent;
+      'sections.newsandinsights-section': SectionsNewsandinsightsSection;
       'sections.provided-services': SectionsProvidedServices;
       'sections.services-section': SectionsServicesSection;
       'sections.strength-component': SectionsStrengthComponent;
       'sections.strengths': SectionsStrengths;
       'shared.customer-logo': SharedCustomerLogo;
       'shared.media': SharedMedia;
+      'shared.newsandinsight': SharedNewsandinsight;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

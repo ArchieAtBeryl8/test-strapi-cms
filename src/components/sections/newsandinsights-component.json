@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_sections_newsandinsights_components",
+  "info": {
+    "displayName": "newsandinsights_component",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "newandinsights": {
+      "type": "component",
+      "component": "shared.newsandinsight",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
