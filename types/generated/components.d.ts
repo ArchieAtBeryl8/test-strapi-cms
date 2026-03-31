@@ -80,6 +80,17 @@ export interface SectionsNewsandinsightsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsPrivacypolicyBody extends Struct.ComponentSchema {
+  collectionName: 'components_sections_privacypolicy_bodies';
+  info: {
+    displayName: 'privacypolicy-body';
+  };
+  attributes: {
+    body: Schema.Attribute.Blocks;
+    subsectiontitle: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsProvidedServices extends Struct.ComponentSchema {
   collectionName: 'components_sections_provided_services';
   info: {
@@ -248,6 +259,7 @@ declare module '@strapi/strapi' {
       'sections.hero': SectionsHero;
       'sections.newsandinsights-component': SectionsNewsandinsightsComponent;
       'sections.newsandinsights-section': SectionsNewsandinsightsSection;
+      'sections.privacypolicy-body': SectionsPrivacypolicyBody;
       'sections.provided-services': SectionsProvidedServices;
       'sections.services-section': SectionsServicesSection;
       'sections.strength-component': SectionsStrengthComponent;

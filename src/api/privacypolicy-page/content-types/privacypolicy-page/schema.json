@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacypolicy_pages",
+  "info": {
+    "singularName": "privacypolicy-page",
+    "pluralName": "privacypolicy-pages",
+    "displayName": "privacypolicy-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "body": {
+      "type": "component",
+      "component": "sections.privacypolicy-body",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_privacypolicy_bodies",
+  "info": {
+    "displayName": "privacypolicy-body"
+  },
+  "options": {},
+  "attributes": {
+    "subsectiontitle": {
+      "type": "string"
+    },
+    "body": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
