@@ -235,6 +235,9 @@ export interface SharedServiceItem extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Blocks;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    service_icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     title: Schema.Attribute.String;
   };
 }
