@@ -681,6 +681,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     customers: Schema.Attribute.Component<'sections.customers-section', false>;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
     hero: Schema.Attribute.Component<'sections.hero', false>;
     home_services: Schema.Attribute.Component<
       'sections.services-section',

@@ -27,6 +27,18 @@ export interface SectionsCustomersSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsFooter extends Struct.ComponentSchema {
+  collectionName: 'components_sections_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {
+    footer_logo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface SectionsHero extends Struct.ComponentSchema {
   collectionName: 'components_sections_heroes';
   info: {
@@ -259,6 +271,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'sections.company-section-one': SectionsCompanySectionOne;
       'sections.customers-section': SectionsCustomersSection;
+      'sections.footer': SectionsFooter;
       'sections.hero': SectionsHero;
       'sections.newsandinsights-component': SectionsNewsandinsightsComponent;
       'sections.newsandinsights-section': SectionsNewsandinsightsSection;
