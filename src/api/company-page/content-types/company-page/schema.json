@@ -30,6 +30,11 @@
       "type": "component",
       "component": "sections.customers-section",
       "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
     }
   }
 }

@@ -20,6 +20,11 @@
       "type": "component",
       "component": "sections.newsandinsights-section",
       "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
     }
   }
 }
