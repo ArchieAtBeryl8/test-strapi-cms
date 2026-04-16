@@ -141,6 +141,9 @@ export interface SectionsStrengthComponent extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Blocks;
+    hover_icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
