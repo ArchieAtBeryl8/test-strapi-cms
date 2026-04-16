@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactus_pages",
+  "info": {
+    "singularName": "contactus-page",
+    "pluralName": "contactus-pages",
+    "displayName": "contactus-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "component",
+      "component": "sections.contact-us-content",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

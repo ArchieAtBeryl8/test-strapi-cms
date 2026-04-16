@@ -15,6 +15,37 @@ export interface SectionsCompanySectionOne extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsContactUsContent extends Struct.ComponentSchema {
+  collectionName: 'components_sections_contact_us_contents';
+  info: {
+    displayName: 'contact_us_content';
+  };
+  attributes: {
+    alerts: Schema.Attribute.Component<'shared.alerts', false>;
+    company: Schema.Attribute.String;
+    consent: Schema.Attribute.String;
+    country: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    errors: Schema.Attribute.Component<'shared.errors', false>;
+    firstName: Schema.Attribute.String;
+    input: Schema.Attribute.String;
+    jobTitle: Schema.Attribute.String;
+    lastName: Schema.Attribute.String;
+    message: Schema.Attribute.String;
+    others: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    privacyRedirect: Schema.Attribute.Component<
+      'shared.privacy-redirect',
+      false
+    >;
+    PrivacyTextEnd: Schema.Attribute.String;
+    privacyTextStart: Schema.Attribute.String;
+    subject: Schema.Attribute.String;
+    submit: Schema.Attribute.String;
+    thailand: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsCustomersSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_customers_sections';
   info: {
@@ -163,6 +194,17 @@ export interface SectionsStrengths extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAlerts extends Struct.ComponentSchema {
+  collectionName: 'components_shared_alerts';
+  info: {
+    displayName: 'alerts';
+  };
+  attributes: {
+    fail: Schema.Attribute.String;
+    success: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCustomerLogo extends Struct.ComponentSchema {
   collectionName: 'components_shared_customer_logos';
   info: {
@@ -175,6 +217,23 @@ export interface SharedCustomerLogo extends Struct.ComponentSchema {
     >;
     name: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedErrors extends Struct.ComponentSchema {
+  collectionName: 'components_shared_errors';
+  info: {
+    displayName: 'errors';
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    firstName: Schema.Attribute.String;
+    jobTitle: Schema.Attribute.String;
+    lastName: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    privacy: Schema.Attribute.String;
+    subject: Schema.Attribute.String;
   };
 }
 
@@ -203,6 +262,17 @@ export interface SharedNewsandinsight extends Struct.ComponentSchema {
       true
     >;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedPrivacyRedirect extends Struct.ComponentSchema {
+  collectionName: 'components_shared_privacy_redirects';
+  info: {
+    displayName: 'privacyRedirect';
+  };
+  attributes: {
+    privacyTextContent: Schema.Attribute.String;
+    privacyTextLink: Schema.Attribute.String;
   };
 }
 
@@ -276,6 +346,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'sections.company-section-one': SectionsCompanySectionOne;
+      'sections.contact-us-content': SectionsContactUsContent;
       'sections.customers-section': SectionsCustomersSection;
       'sections.footer': SectionsFooter;
       'sections.hero': SectionsHero;
@@ -286,9 +357,12 @@ declare module '@strapi/strapi' {
       'sections.services-section': SectionsServicesSection;
       'sections.strength-component': SectionsStrengthComponent;
       'sections.strengths': SectionsStrengths;
+      'shared.alerts': SharedAlerts;
       'shared.customer-logo': SharedCustomerLogo;
+      'shared.errors': SharedErrors;
       'shared.media': SharedMedia;
       'shared.newsandinsight': SharedNewsandinsight;
+      'shared.privacy-redirect': SharedPrivacyRedirect;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;

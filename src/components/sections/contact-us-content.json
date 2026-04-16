@@ -1,0 +1,73 @@
+{
+  "collectionName": "components_sections_contact_us_contents",
+  "info": {
+    "displayName": "contact_us_content"
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "consent": {
+      "type": "string"
+    },
+    "privacyTextStart": {
+      "type": "string"
+    },
+    "privacyRedirect": {
+      "type": "component",
+      "component": "shared.privacy-redirect",
+      "repeatable": false
+    },
+    "PrivacyTextEnd": {
+      "type": "string"
+    },
+    "submit": {
+      "type": "string"
+    },
+    "input": {
+      "type": "string"
+    },
+    "thailand": {
+      "type": "string"
+    },
+    "others": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "component",
+      "component": "shared.errors",
+      "repeatable": false
+    },
+    "alerts": {
+      "type": "component",
+      "component": "shared.alerts",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

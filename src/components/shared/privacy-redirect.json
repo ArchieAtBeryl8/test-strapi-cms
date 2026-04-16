@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_privacy_redirects",
+  "info": {
+    "displayName": "privacyRedirect"
+  },
+  "options": {},
+  "attributes": {
+    "privacyTextContent": {
+      "type": "string"
+    },
+    "privacyTextLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

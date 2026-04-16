@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_alerts",
+  "info": {
+    "displayName": "alerts"
+  },
+  "options": {},
+  "attributes": {
+    "success": {
+      "type": "string"
+    },
+    "fail": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

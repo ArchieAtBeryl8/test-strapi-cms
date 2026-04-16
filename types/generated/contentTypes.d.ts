@@ -635,6 +635,36 @@ export interface ApiCompanyPageCompanyPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiContactusPageContactusPage extends Struct.SingleTypeSchema {
+  collectionName: 'contactus_pages';
+  info: {
+    displayName: 'contactus-page';
+    pluralName: 'contactus-pages';
+    singularName: 'contactus-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'sections.contact-us-content', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contactus-page.contactus-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1313,6 +1343,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::company-page.company-page': ApiCompanyPageCompanyPage;
+      'api::contactus-page.contactus-page': ApiContactusPageContactusPage;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::newsandinsights-page.newsandinsights-page': ApiNewsandinsightsPageNewsandinsightsPage;
