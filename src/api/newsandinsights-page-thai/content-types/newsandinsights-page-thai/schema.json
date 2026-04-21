@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "newsandinsights_page_thais",
+  "info": {
+    "singularName": "newsandinsights-page-thai",
+    "pluralName": "newsandinsights-page-thais",
+    "displayName": "newsandinsights-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "newsandinsights": {
+      "type": "component",
+      "component": "sections.newsandinsights-section",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "company_page_thais",
+  "info": {
+    "singularName": "company-page-thai",
+    "pluralName": "company-page-thais",
+    "displayName": "company-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "company_section_one": {
+      "type": "component",
+      "component": "sections.company-section-one",
+      "repeatable": true
+    },
+    "strengths": {
+      "type": "component",
+      "component": "sections.strengths",
+      "repeatable": false
+    },
+    "customers": {
+      "type": "component",
+      "component": "sections.customers-section",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

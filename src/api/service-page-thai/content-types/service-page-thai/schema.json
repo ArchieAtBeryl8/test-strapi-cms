@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "service_page_thais",
+  "info": {
+    "singularName": "service-page-thai",
+    "pluralName": "service-page-thais",
+    "displayName": "service-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.provided-services",
+      "repeatable": true
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

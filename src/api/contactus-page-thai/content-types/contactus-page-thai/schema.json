@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactus_page_thais",
+  "info": {
+    "singularName": "contactus-page-thai",
+    "pluralName": "contactus-page-thais",
+    "displayName": "contactus-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "component",
+      "component": "sections.contact-us-content",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

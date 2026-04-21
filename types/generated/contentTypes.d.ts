@@ -600,6 +600,42 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCompanyPageThaiCompanyPageThai
+  extends Struct.SingleTypeSchema {
+  collectionName: 'company_page_thais';
+  info: {
+    displayName: 'company-page-thai';
+    pluralName: 'company-page-thais';
+    singularName: 'company-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company_section_one: Schema.Attribute.Component<
+      'sections.company-section-one',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customers: Schema.Attribute.Component<'sections.customers-section', false>;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::company-page-thai.company-page-thai'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    strengths: Schema.Attribute.Component<'sections.strengths', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCompanyPageCompanyPage extends Struct.SingleTypeSchema {
   collectionName: 'company_pages';
   info: {
@@ -629,6 +665,37 @@ export interface ApiCompanyPageCompanyPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     strengths: Schema.Attribute.Component<'sections.strengths', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactusPageThaiContactusPageThai
+  extends Struct.SingleTypeSchema {
+  collectionName: 'contactus_page_thais';
+  info: {
+    displayName: 'contactus-page-thai';
+    pluralName: 'contactus-page-thais';
+    singularName: 'contactus-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'sections.contact-us-content', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contactus-page-thai.contactus-page-thai'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -697,6 +764,40 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomePageThaiHomePageThai extends Struct.SingleTypeSchema {
+  collectionName: 'home_page_thais';
+  info: {
+    displayName: 'home-page-thai';
+    pluralName: 'home-page-thais';
+    singularName: 'home-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customers: Schema.Attribute.Component<'sections.customers-section', false>;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    home_services: Schema.Attribute.Component<
+      'sections.services-section',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-page-thai.home-page-thai'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   collectionName: 'home_pages';
   info: {
@@ -724,6 +825,40 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNewsandinsightsPageThaiNewsandinsightsPageThai
+  extends Struct.SingleTypeSchema {
+  collectionName: 'newsandinsights_page_thais';
+  info: {
+    displayName: 'newsandinsights-page-thai';
+    pluralName: 'newsandinsights-page-thais';
+    singularName: 'newsandinsights-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::newsandinsights-page-thai.newsandinsights-page-thai'
+    > &
+      Schema.Attribute.Private;
+    newsandinsights: Schema.Attribute.Component<
+      'sections.newsandinsights-section',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -765,6 +900,37 @@ export interface ApiNewsandinsightsPageNewsandinsightsPage
   };
 }
 
+export interface ApiPrivacypolicyPageThaiPrivacypolicyPageThai
+  extends Struct.SingleTypeSchema {
+  collectionName: 'privacypolicy_page_thais';
+  info: {
+    displayName: 'privacypolicy-page-thai';
+    pluralName: 'privacypolicy-page-thais';
+    singularName: 'privacypolicy-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    body: Schema.Attribute.Component<'sections.privacypolicy-body', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::privacypolicy-page-thai.privacypolicy-page-thai'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPrivacypolicyPagePrivacypolicyPage
   extends Struct.SingleTypeSchema {
   collectionName: 'privacypolicy_pages';
@@ -790,6 +956,37 @@ export interface ApiPrivacypolicyPagePrivacypolicyPage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicePageThaiServicePageThai
+  extends Struct.SingleTypeSchema {
+  collectionName: 'service_page_thais';
+  info: {
+    displayName: 'service-page-thai';
+    pluralName: 'service-page-thais';
+    singularName: 'service-page-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.Component<'sections.footer', false>;
+    hero: Schema.Attribute.Component<'sections.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-page-thai.service-page-thai'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Component<'sections.provided-services', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1342,12 +1539,18 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
+      'api::company-page-thai.company-page-thai': ApiCompanyPageThaiCompanyPageThai;
       'api::company-page.company-page': ApiCompanyPageCompanyPage;
+      'api::contactus-page-thai.contactus-page-thai': ApiContactusPageThaiContactusPageThai;
       'api::contactus-page.contactus-page': ApiContactusPageContactusPage;
       'api::global.global': ApiGlobalGlobal;
+      'api::home-page-thai.home-page-thai': ApiHomePageThaiHomePageThai;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::newsandinsights-page-thai.newsandinsights-page-thai': ApiNewsandinsightsPageThaiNewsandinsightsPageThai;
       'api::newsandinsights-page.newsandinsights-page': ApiNewsandinsightsPageNewsandinsightsPage;
+      'api::privacypolicy-page-thai.privacypolicy-page-thai': ApiPrivacypolicyPageThaiPrivacypolicyPageThai;
       'api::privacypolicy-page.privacypolicy-page': ApiPrivacypolicyPagePrivacypolicyPage;
+      'api::service-page-thai.service-page-thai': ApiServicePageThaiServicePageThai;
       'api::service-page.service-page': ApiServicePageServicePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

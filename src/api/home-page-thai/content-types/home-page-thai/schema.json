@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_page_thais",
+  "info": {
+    "singularName": "home-page-thai",
+    "pluralName": "home-page-thais",
+    "displayName": "home-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "customers": {
+      "type": "component",
+      "component": "sections.customers-section",
+      "repeatable": false
+    },
+    "home_services": {
+      "type": "component",
+      "component": "sections.services-section",
+      "repeatable": false
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}

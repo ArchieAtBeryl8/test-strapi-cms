@@ -1,0 +1,7 @@
+/**
+ * privacypolicy-page-thai service
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreService('api::privacypolicy-page-thai.privacypolicy-page-thai');

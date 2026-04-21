@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacypolicy_page_thais",
+  "info": {
+    "singularName": "privacypolicy-page-thai",
+    "pluralName": "privacypolicy-page-thais",
+    "displayName": "privacypolicy-page-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false
+    },
+    "body": {
+      "type": "component",
+      "component": "sections.privacypolicy-body",
+      "repeatable": true
+    },
+    "footer": {
+      "type": "component",
+      "component": "sections.footer",
+      "repeatable": false
+    }
+  }
+}
