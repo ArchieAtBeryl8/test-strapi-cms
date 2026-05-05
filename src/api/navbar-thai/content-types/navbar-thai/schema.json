@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "navbar_thais",
+  "info": {
+    "singularName": "navbar-thai",
+    "pluralName": "navbar-thais",
+    "displayName": "navbar-thai"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "navlogo": {
+      "type": "component",
+      "component": "shared.navlogo",
+      "repeatable": false
+    },
+    "centermenu": {
+      "type": "component",
+      "component": "shared.centermenu",
+      "repeatable": false
+    },
+    "languageswitch": {
+      "type": "component",
+      "component": "shared.languageswitch",
+      "repeatable": false
+    }
+  }
+}

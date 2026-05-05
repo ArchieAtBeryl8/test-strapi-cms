@@ -123,6 +123,17 @@ export interface SectionsNewsandinsightsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsPagelinks extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pagelinks';
+  info: {
+    displayName: 'pagelinks';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    pagename: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsPrivacypolicyBody extends Struct.ComponentSchema {
   collectionName: 'components_sections_privacypolicy_bodies';
   info: {
@@ -205,6 +216,16 @@ export interface SharedAlerts extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCentermenu extends Struct.ComponentSchema {
+  collectionName: 'components_shared_centermenus';
+  info: {
+    displayName: 'centermenu';
+  };
+  attributes: {
+    pagelinks: Schema.Attribute.Component<'sections.pagelinks', true>;
+  };
+}
+
 export interface SharedCustomerLogo extends Struct.ComponentSchema {
   collectionName: 'components_shared_customer_logos';
   info: {
@@ -237,6 +258,17 @@ export interface SharedErrors extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLanguageswitch extends Struct.ComponentSchema {
+  collectionName: 'components_shared_languageswitches';
+  info: {
+    displayName: 'languageswitch';
+  };
+  attributes: {
+    eng: Schema.Attribute.String;
+    thai: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -245,6 +277,17 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
+export interface SharedNavlogo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_navlogos';
+  info: {
+    displayName: 'navlogo';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -352,15 +395,19 @@ declare module '@strapi/strapi' {
       'sections.hero': SectionsHero;
       'sections.newsandinsights-component': SectionsNewsandinsightsComponent;
       'sections.newsandinsights-section': SectionsNewsandinsightsSection;
+      'sections.pagelinks': SectionsPagelinks;
       'sections.privacypolicy-body': SectionsPrivacypolicyBody;
       'sections.provided-services': SectionsProvidedServices;
       'sections.services-section': SectionsServicesSection;
       'sections.strength-component': SectionsStrengthComponent;
       'sections.strengths': SectionsStrengths;
       'shared.alerts': SharedAlerts;
+      'shared.centermenu': SharedCentermenu;
       'shared.customer-logo': SharedCustomerLogo;
       'shared.errors': SharedErrors;
+      'shared.languageswitch': SharedLanguageswitch;
       'shared.media': SharedMedia;
+      'shared.navlogo': SharedNavlogo;
       'shared.newsandinsight': SharedNewsandinsight;
       'shared.privacy-redirect': SharedPrivacyRedirect;
       'shared.quote': SharedQuote;

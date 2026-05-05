@@ -832,6 +832,66 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiNavbarThaiNavbarThai extends Struct.SingleTypeSchema {
+  collectionName: 'navbar_thais';
+  info: {
+    displayName: 'navbar-thai';
+    pluralName: 'navbar-thais';
+    singularName: 'navbar-thai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    centermenu: Schema.Attribute.Component<'shared.centermenu', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    languageswitch: Schema.Attribute.Component<'shared.languageswitch', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar-thai.navbar-thai'
+    > &
+      Schema.Attribute.Private;
+    navlogo: Schema.Attribute.Component<'shared.navlogo', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    centermenu: Schema.Attribute.Component<'shared.centermenu', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    languageswitch: Schema.Attribute.Component<'shared.languageswitch', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar.navbar'
+    > &
+      Schema.Attribute.Private;
+    navlogo: Schema.Attribute.Component<'shared.navlogo', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewsandinsightsPageThaiNewsandinsightsPageThai
   extends Struct.SingleTypeSchema {
   collectionName: 'newsandinsights_page_thais';
@@ -1546,6 +1606,8 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page-thai.home-page-thai': ApiHomePageThaiHomePageThai;
       'api::home-page.home-page': ApiHomePageHomePage;
+      'api::navbar-thai.navbar-thai': ApiNavbarThaiNavbarThai;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::newsandinsights-page-thai.newsandinsights-page-thai': ApiNewsandinsightsPageThaiNewsandinsightsPageThai;
       'api::newsandinsights-page.newsandinsights-page': ApiNewsandinsightsPageNewsandinsightsPage;
       'api::privacypolicy-page-thai.privacypolicy-page-thai': ApiPrivacypolicyPageThaiPrivacypolicyPageThai;

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_navlogos",
+  "info": {
+    "displayName": "navlogo"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

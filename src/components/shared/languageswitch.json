@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_languageswitches",
+  "info": {
+    "displayName": "languageswitch"
+  },
+  "options": {},
+  "attributes": {
+    "thai": {
+      "type": "string"
+    },
+    "eng": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

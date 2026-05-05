@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_centermenus",
+  "info": {
+    "displayName": "centermenu"
+  },
+  "options": {},
+  "attributes": {
+    "pagelinks": {
+      "type": "component",
+      "component": "sections.pagelinks",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

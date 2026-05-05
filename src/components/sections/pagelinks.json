@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_pagelinks",
+  "info": {
+    "displayName": "pagelinks"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "pagename": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
